@@ -23,7 +23,7 @@ public class DiskCache implements ImageCache{
 
     //从缓存中获取图片
     public Bitmap get(String url){
-        return BitmapFactory.decodeFile(cacheDir + url);
+        return BitmapFactory.decodeFile(cacheDir + url.replaceAll("/" , "x"));
     }
 
     //将图片缓存到内存
